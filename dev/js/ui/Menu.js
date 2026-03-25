@@ -88,8 +88,7 @@ var Menu = (function() {
 
 	track.setAttribute('class', 'selected');
 	effects[0].setAttribute('class', 'selected');
-	btn.style.opacity = 0;
-	btn.style.display = 'none';
+	onClose();
 
 	start.querySelector("button").addEventListener("click", () => {
 		start.style.display = "none";

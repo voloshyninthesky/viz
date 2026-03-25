@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WebGL Audio Viz</title>
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="gl-wrapper"><canvas id="gl-canvas"></canvas></div>
+
+    <canvas id="viz-canvas"></canvas>
+
+    <div class="menu">
+        <div class="close">- hide options</div>
+        <p>Effects</p>
+        <ul class="effects">
+            <li data-index="0">Liquid gem</li>
+            <li data-index="1">Cityscape</li>
+            <li data-index="2">Spherical lines</li>
+            <li data-index="3">Waves</li>
+            <li data-index="4">Elastic cube</li>
+        </ul>
+        <p>Audio Source</p>
+        <ul>
+            <li class="mic">Microphone</li>
+            <li class="track">Track</li>
+        </ul>
+    </div>
+
+    <div class="menu-button"><span>+</span></div>
+
+    <div class="start">
+        <button>Start</button>
+    </div>
+
+    <!-- It does only work with an older version of SQR -->
+    <script type="text/javascript" src="squareroot-min-76.js"></script>
+
+    <!-- !DEV -->
+    <script type="text/javascript" src="js/audio/SoundAnalyser.js"></script>
+    <script type="text/javascript" src="js/audio/SoundVisualizer.js"></script>
+    <script type="text/javascript" src="js/effects/Blur.js"></script>
+    <script type="text/javascript" src="js/effects/GlowChromaticDist.js"></script>
+    <script type="text/javascript" src="js/effects/NoEffect.js"></script>
+    <script type="text/javascript" src="js/effects/ScanLines.js"></script>
+    <script type="text/javascript" src="js/effects/Vignette.js"></script>
+    <script type="text/javascript" src="js/geometry/Freeway.js"></script>
+    <script type="text/javascript" src="js/geometry/LineSphereGeometry.js"></script>
+    <script type="text/javascript" src="js/geometry/Skyscraper.js"></script>
+    <script type="text/javascript" src="js/objects/Gems.js"></script>
+    <script type="text/javascript" src="js/objects/LineSphere.js"></script>
+    <script type="text/javascript" src="js/objects/Pyramids.js"></script>
+    <script type="text/javascript" src="js/objects/SkyscraperLane.js"></script>
+    <script type="text/javascript" src="js/objects/StrechingCube.js"></script>
+    <script type="text/javascript" src="js/ui/EffectCollection.js"></script>
+    <script type="text/javascript" src="js/ui/Key.js"></script>
+    <script type="text/javascript" src="js/ui/LeapWrapper.js"></script>
+    <script type="text/javascript" src="js/ui/Menu.js"></script>
+    <script type="text/javascript" src="js/ui/Stats.js"></script>
+    <script type="text/javascript" src="js/ui/VisualizerCollection.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <!-- !DEV -->
+
+    <!-- !PROD --><!--
+<script src="soundviz-%%BUILD_NUMBER%%.js"></script> 
+--><!-- !PROD -->
+
+</body>
+
+</html>
