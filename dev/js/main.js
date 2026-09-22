@@ -98,6 +98,11 @@ visualizer.add('linesphere', new LineSphere(engine));
 visualizer.add('strechcube', new StrechingCube(engine));
 visualizer.add('skyscraper', new SkyscraperLane(engine));
 visualizer.add('pyramids', new Pyramids(engine));
+visualizer.add('tunnel', new ShaderVisual(engine, 'glsl/NeonTunnel.glsl'));
+visualizer.add('aurora', new ShaderVisual(engine, 'glsl/Aurora.glsl', { speed: 0.8 }));
+visualizer.add('kaleido', new ShaderVisual(engine, 'glsl/Kaleidoscope.glsl'));
+visualizer.add('outrun', new ShaderVisual(engine, 'glsl/Outrun.glsl'));
+visualizer.add('hyperspace', new ShaderVisual(engine, 'glsl/Hyperspace.glsl'));
 
 //
 var effect = new EffectCollection();
@@ -113,7 +118,12 @@ var compositions = [
     ['skyscraper', 'glow'],
     ['linesphere', 'blur'],
     ['pyramids', 'none'],
-    ['strechcube', 'scanlines']
+    ['strechcube', 'scanlines'],
+    ['tunnel', 'glow'],
+    ['aurora', 'none'],
+    ['kaleido', 'vignette'],
+    ['outrun', 'vignette'],
+    ['hyperspace', 'glow']
 ];
 
 var setEffect = function (index) {
